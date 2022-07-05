@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useStore } from "effector-react";
 import $store, { getTodos } from "./store";
-import { BASE_URL } from '../constants'
 import Home from "../page/home";
 
 const Effector = () => {
@@ -9,10 +8,6 @@ const Effector = () => {
     const { data } = store;
 
     const loading = useStore(getTodos.pending)
-
-    React.useEffect(() => {
-        getTodos(BASE_URL)
-    }, [])
 
     if (loading) {
         return <div> Loading...</div>

@@ -8,7 +8,7 @@ const Home = ({ data }) => {
             <h1>Descrição</h1>
             {data.description.split(',').map((des) => (
                 <>
-                    <h2>{des}</h2>
+                 <h2>{des}</h2>
                 </>
             ))}
         </div>
